@@ -1,0 +1,17 @@
+<div class="articles container">
+
+  {{#each articles }}
+  <div class="title panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{this.title}}</h3>
+    </div>
+    <div class="link panel-body">
+      <a class="artLink" href={{this.link}}>{{this.link}}</a>
+      <button data-id={{_id}} class="btn btn-outline-light save-article">Save Article</button>
+    </div>
+  </div>
+  <br />
+  <br />
+  {{/each}}
+
+</div>

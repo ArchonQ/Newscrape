@@ -1,0 +1,23 @@
+<div class="articles container">
+
+    {{#each articles }}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="title">{{title}}</h3>
+      </div>
+      <div class="panel-body">
+        <a class="link" href={{link}}>{{link}}</a>
+        {{!-- Delete button changes from saved = true tp saved = false --}}
+        <button data-id={{_id}} class="btn btn-outline-light my-2 my-sm-0 delete-article">Delete Article</button>
+        {{!-- Add note button opens a note modal --}}
+        <button data-id={{_id}} class="btn btn-outline-light my-2 my-sm-0 add-note">Add a Note</button>
+      </div>
+    </div>
+    <br />
+    <br />
+    {{/each}}
+
+</div>
+
+{{!-- Will make modal pop up --}}
+{{>modal}}
